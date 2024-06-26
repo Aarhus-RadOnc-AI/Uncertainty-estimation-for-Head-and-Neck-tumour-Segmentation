@@ -67,6 +67,7 @@ If you use PhiSeg, please cite and reference the original paper "Capturing Uncer
    Files involving:
    - neural_network.py (added additional Gaussian noise TTA sample to _internal_maybe_mirror_and_pred_3D())
    - all the involved trainer files (do_gaussian_noise=True)
+   - predict.py
 
 The below code were added to the prediction functions:
 
