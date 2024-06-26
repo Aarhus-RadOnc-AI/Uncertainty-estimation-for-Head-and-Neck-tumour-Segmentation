@@ -15,4 +15,29 @@ cd nnUNet_uncertainty
 pip install -e .
 ```
 
+## Modifications compared to original nnUNet.
+
+1. Add dropout for the middle of UNet.
+   
+   Files involving:
+   - Add new trainer: nnUNetTrainerV2_dropout.py
+   - Add new architecture: generic_UNet_center_dropout.py
+     
+   Change the below dropout parameter in "nnUNetTrainerV2_dropout.py"
+```
+dropout_op_kwargs = {'p': 0.2, 'inplace': True}
+```
+2. Add Snapshot checkpoints with learning rate restart.
+
+   Files involving:
+   - nnUNetTrainerV2_dropout.py
+   - nnUNetTrainerV2.py
+   - network_trainer.py
+
+   Set the below snapshot parameters in "nnUNetTrainerV2_dropout.py"
+```
+        self.restart_lr_after = 1000
+        self.restart_multiplications =5
+```
+By default, the trainer would save once 100 epochs after the training reached "restart_lr_after".
 
