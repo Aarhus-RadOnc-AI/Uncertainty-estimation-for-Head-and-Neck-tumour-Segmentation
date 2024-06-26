@@ -15,7 +15,7 @@ cd nnUNet_uncertainty
 pip install -e .
 ```
 
-## Modifications compared to original nnUNet.
+## Modifications compared to original nnUNet
 
 1. Add dropout for the middle of UNet.
    
@@ -48,8 +48,9 @@ By default, the trainer would save once 100 epochs after the training reached "r
    - nnUNetTrainerV2_PhiSeg_gamma.py # Loss composition oscillation between reconstruction loss and ELOB loss.
    - nnUNetTrainerV2_PhiSegAdam.py # Using Adam as optimizer.
    - nnUNetTrainerV2_PhiSeg_dc_ce.py # Only optimize on the reconstruction loss (cross entropy + dice loss).
-   - PHISeg.py
-If you use PhiSeg, please cite and reference to the original paper "Capturing Uncertainty in Medical Image Segmentation":
+   - PHISeg.py # the architecture for PhiSeg. 
+     
+If you use PhiSeg, please cite and reference the original paper "Capturing Uncertainty in Medical Image Segmentation":
 ```
 @article{PHiSeg2019Baumgartner,
          author={Baumgartner, Christian F. and Tezcan, Kerem C. and
@@ -61,3 +62,8 @@ If you use PhiSeg, please cite and reference to the original paper "Capturing Un
          year={2019},
 }
 ```
+
+4. Add Gaussian noise for Test time augmentation.
+   Files involving:
+   - neural_network.py (added additional Gaussian noise TTA sample to _internal_maybe_mirror_and_pred_3D())
+   - all the involved trainer files (do_gaussian_noise=True)
