@@ -37,7 +37,27 @@ dropout_op_kwargs = {'p': 0.2, 'inplace': True}
    Set the below snapshot parameters in "nnUNetTrainerV2_dropout.py"
 ```
         self.restart_lr_after = 1000
-        self.restart_multiplications =5
+        self.restart_multiplications = 5
 ```
 By default, the trainer would save once 100 epochs after the training reached "restart_lr_after".
 
+3. Add Probabilistic Hierarchical Segmentation (PhiSeg).
+   
+   Files involving:
+   - nnUNetTrainerV2_PhiSeg.py
+   - nnUNetTrainerV2_PhiSeg_gamma.py # Loss composition oscillation between reconstruction loss and ELOB loss.
+   - nnUNetTrainerV2_PhiSegAdam.py # Using Adam as optimizer.
+   - nnUNetTrainerV2_PhiSeg_dc_ce.py # Only optimize on the reconstruction loss (cross entropy + dice loss).
+   - PHISeg.py
+If you use PhiSeg, please cite and reference to the original paper "Capturing Uncertainty in Medical Image Segmentation":
+```
+@article{PHiSeg2019Baumgartner,
+         author={Baumgartner, Christian F. and Tezcan, Kerem C. and
+         Chaitanya, Krishna and H{\"o}tker, Andreas M. and
+         Muehlematter, Urs J. and Schawkat, Khoschy and Becker, Anton S. and
+         Donati, Olivio and Konukoglu, Ender},
+         title={{PHiSeg}: Capturing Uncertainty in Medical Image Segmentation},
+         journal={arXiv:1906.04045},
+         year={2019},
+}
+```
