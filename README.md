@@ -3,9 +3,8 @@ This repository contains code and visualizations for comparing various uncertain
 
 This repository could also work for other cancer sites or tasks, just remember to change the target value of 1 (GTV-T) and 2 (GTV-N) to your own label numbers. 
 
-![image](figures/HNCDL_628_coronal.png)
 ##### Example figure of the use of uncertainty map (U-Map) for error detection (Complex method applied).
-
+![image](figures/HNCDL_628_coronal.png)
 
 ## Setting Up Your Environment
 This study primarily builds upon the original nnUNet framework (version 1), with several modifications to facilitate uncertainty estimation. To replicate our environment and ensure compatibility, please follow the steps below to create and install the necessary components in a new virtual environment.
