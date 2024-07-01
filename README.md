@@ -1,7 +1,7 @@
 # Uncertainty estimation for Head and Neck tumour Segmentation with nnUNet
 This repository contains code and visualizations for comparing various uncertainty estimation methods applied to the auto-segmentation of head and neck tumors, focusing on both Gross Tumor Volume primary (GTV-T) and Nodes (GTV-N).
 
-This repository could also work for other sites or tasks, just remember to change the target value of 1 (GTV-T) and 2 (GTV-N) to your own label numbers. 
+This repository could also work for other cancer sites or tasks, just remember to change the target value of 1 (GTV-T) and 2 (GTV-N) to your own label numbers. 
 
 ## Setting Up Your Environment
 This study primarily builds upon the original nnUNet framework (version 1), with several modifications to facilitate uncertainty estimation. To replicate our environment and ensure compatibility, please follow the steps below to create and install the necessary components in a new virtual environment.
