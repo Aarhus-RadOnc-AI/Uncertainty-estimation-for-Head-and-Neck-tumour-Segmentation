@@ -4,7 +4,7 @@ This repository contains code and visualizations for comparing various uncertain
 This repository could also work for other cancer sites or tasks, just remember to change the target value of 1 (GTV-T) and 2 (GTV-N) to your own label numbers. 
 
 ![image](figures/HNCDL_628_coronal.png)
-
+##### Example figure of the use of uncertainty map (U-Map) for error detection (Complex method applied).
 
 
 ## Setting Up Your Environment
