@@ -1,0 +1,4 @@
+#/bin/bash
+CUDA_VISIBLE_DEVICES=1 python ../src/prob_predictor.py  -i /data/jintao/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task901_AUH/imagesTs -o /data/jintao/nnUNet/nnUNet_results/nnUNet/3d_fullres/Task901_AUH/nnUNetTrainerV2_dropout__nnUNetPlansv2.1 -tr nnUNetTrainerV2_dropout -f 0 1 2 3 4 -t 901 --num_mc_dropout 10 --snapshots 1100 1200 1300 1400 1500
+
+python ../src/calibration_evaluator.py -ref /data/jintao/nnUNet/nnUNet_raw_data_base/nnUNet_raw_data/Task901_AUH/labelsTs/ -pred /data/jintao/nnUNet/nnUNet_results/nnUNet/3d_fullres/Task901_AUH/nnUNetTrainerV2_dropout__nnUNetPlansv2.1/prob_maps/Task901_AUH/imagesTs/f01234_mc10_tta_snap/ -l 1 2
