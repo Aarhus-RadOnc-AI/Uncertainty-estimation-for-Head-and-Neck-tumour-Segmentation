@@ -3,11 +3,7 @@ This repository contains code and visualizations for comparing various uncertain
 
 This repository could also work for other cancer sites or tasks, just remember to change the target value of 1 (GTV-T) and 2 (GTV-N) to your own label numbers. 
 
-Part of the work in this repository is included in the paper below. Please remember to cite this paper:
 
-```
-Ren, Jintao, et al. "Enhancing the reliability of deep learning-based head and neck tumour segmentation using uncertainty estimation with multi-modal images." Physics in Medicine & Biology 69.16 (2024): 165018.
-```
 
 ##### Example figure of the use of uncertainty map (U-Map) for error detection (Complex method applied).
 ![image](figures/HNCDL_628_coronal.png)
@@ -149,17 +145,7 @@ By default, the trainer would save once 100 epochs after the training reached "r
    - PHISeg.py # the architecture for PhiSeg. 
      
 If you use PhiSeg, please cite and reference the original paper "Capturing Uncertainty in Medical Image Segmentation":
-```
-@article{PHiSeg2019Baumgartner,
-         author={Baumgartner, Christian F. and Tezcan, Kerem C. and
-         Chaitanya, Krishna and H{\"o}tker, Andreas M. and
-         Muehlematter, Urs J. and Schawkat, Khoschy and Becker, Anton S. and
-         Donati, Olivio and Konukoglu, Ender},
-         title={{PHiSeg}: Capturing Uncertainty in Medical Image Segmentation},
-         journal={arXiv:1906.04045},
-         year={2019},
-}
-```
+
 
 4. Add Gaussian noise for Test time augmentation.
    Files involving:
@@ -177,4 +163,21 @@ The below code was added to the prediction functions:
                 pred = self.inference_apply_nonlin(self(x_noisy))
                 result_torch += 1 / num_results * pred
 
+```
+## Publications
+
+Part of the work in this repository is included in the paper below. Please remember to cite this paper:
+
+Ren, Jintao, et al. "Enhancing the reliability of deep learning-based head and neck tumour segmentation using uncertainty estimation with multi-modal images." Physics in Medicine & Biology 69.16 (2024): 165018.
+```
+@article{ren2024enhancing,
+  title={Enhancing the reliability of deep learning-based head and neck tumour segmentation using uncertainty estimation with multi-modal images},
+  author={Ren, Jintao and Teuwen, Jonas and Nijkamp, Jasper and Rasmussen, Mathis and Gouw, Zeno and Eriksen, Jesper Grau and Sonke, Jan-Jakob and Korreman, Stine},
+  journal={Physics in Medicine \& Biology},
+  volume={69},
+  number={16},
+  pages={165018},
+  year={2024},
+  publisher={IOP Publishing}
+}
 ```
