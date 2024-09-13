@@ -3,6 +3,12 @@ This repository contains code and visualizations for comparing various uncertain
 
 This repository could also work for other cancer sites or tasks, just remember to change the target value of 1 (GTV-T) and 2 (GTV-N) to your own label numbers. 
 
+Part of the work in this repository is included in the paper below. Please remember to cite this paper:
+
+```
+Ren, Jintao, et al. "Enhancing the reliability of deep learning-based head and neck tumour segmentation using uncertainty estimation with multi-modal images." Physics in Medicine & Biology 69.16 (2024): 165018.
+```
+
 ##### Example figure of the use of uncertainty map (U-Map) for error detection (Complex method applied).
 ![image](figures/HNCDL_628_coronal.png)
 
