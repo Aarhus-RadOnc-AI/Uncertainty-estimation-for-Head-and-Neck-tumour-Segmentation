@@ -144,7 +144,7 @@ By default, the trainer would save once 100 epochs after the training reached "r
    - nnUNetTrainerV2_PhiSeg_dc_ce.py # Only optimize on the reconstruction loss (cross entropy + dice loss).
    - PHISeg.py # the architecture for PhiSeg. 
      
-If you use PhiSeg, please cite and reference the original paper "Capturing Uncertainty in Medical Image Segmentation":
+If you use PhiSeg, please cite and reference the original paper "Baumgartner, Christian F., et al. "Phiseg: Capturing uncertainty in medical image segmentation." Medical Image Computing and Computer Assisted Intervention–MICCAI 2019: 22nd International Conference, Shenzhen, China, October 13–17, 2019, Proceedings, Part II 22. Springer International Publishing, 2019".
 
 
 4. Add Gaussian noise for Test time augmentation.
