@@ -5,7 +5,7 @@ This repository could also work for other cancer sites or tasks, just remember t
 
 
 
-##### Example figure of the use of uncertainty map (U-Map) for error detection (Complex method applied).
+##### Example figure of the use of uncertainty map (U-Map) for error detection (Complex of MC dropout, Ensemble, Snapshot checkpoints applied).
 ![image](figures/HNCDL_628_coronal.png)
 
 ## Setting Up Your Environment
